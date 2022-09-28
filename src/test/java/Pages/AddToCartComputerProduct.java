@@ -19,6 +19,7 @@ public class AddToCartComputerProduct {
     By ClickLoginButton = By.xpath("//button[@class= 'button-1 login-button']");
     By clickOnComputer = By.xpath("//a[contains(text(), 'Computers')]");
     By clickOnNotebooks = By.xpath("//a[@title = 'Show products in category Notebooks']");
+    By clickonNotebookType = By.xpath("//a[contains(text(), 'Asus N551JK-XO076H Laptop')]");
     By clickOnAddToCart = By.xpath("//button[@class = 'button-2 product-box-add-to-cart-button']");
     By clickOnAddCartItem = By.xpath("//button[@class = 'button-1 add-to-cart-button']");
     By clickOnShoppingCart = By.xpath("//span[contains(text(), 'Shopping cart')]");
@@ -58,6 +59,7 @@ public class AddToCartComputerProduct {
 
         driver.findElement(clickOnComputer).click();
         driver.findElement(clickOnNotebooks).click();
+        driver.findElement(clickonNotebookType).click();
         driver.findElement(clickOnAddToCart).click();
         driver.findElement(clickOnAddCartItem).click();
         driver.findElement(clickOnShoppingCart).click();
