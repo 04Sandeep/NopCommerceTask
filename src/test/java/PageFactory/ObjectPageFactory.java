@@ -1,21 +1,21 @@
 package PageFactory;
 
-import Pages.LoginPage;
+import Pages.RegisteringAUser;
 import org.openqa.selenium.WebDriver;
 
 public class ObjectPageFactory {
     WebDriver driver;
-    private LoginPage loginPage;
+    private RegisteringAUser registeringAUser;
 
     public ObjectPageFactory(WebDriver driver) {
         this.driver = driver;
     }
 
-    public LoginPage getLoginPage() {
-        if (loginPage == null) {
-            loginPage = new LoginPage(driver);
+    public RegisteringAUser getRegisteringAUser() {
+        if (registeringAUser == null) {
+            registeringAUser = new RegisteringAUser(driver);
         }
-        return loginPage;
+        return registeringAUser;
     }
 }
 

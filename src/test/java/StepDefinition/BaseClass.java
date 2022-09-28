@@ -22,7 +22,7 @@ public class BaseClass {
 
         try {
             prop = new Properties();
-            FileInputStream ip = new FileInputStream("C:\\Users\\SandeepKaur\\IdeaProjects\\demo\\ThursdayTask\\src\\test\\java\\PropertiesFile\\config.properties");
+            FileInputStream ip = new FileInputStream("C:\\Users\\SandeepKaur\\IdeaProjects\\demo\\NopCommerceTask\\src\\test\\java\\PropertiesFiles\\config.properties");
             prop.load(ip);
         }
         catch (FileNotFoundException e)
