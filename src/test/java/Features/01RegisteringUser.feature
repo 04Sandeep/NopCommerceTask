@@ -6,4 +6,3 @@ Feature:
     And user is entering registration details
     Then verifying the registered user
 
-

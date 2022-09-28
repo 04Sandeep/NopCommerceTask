@@ -34,7 +34,7 @@ public class RegisteringAUser {
 
     public void verify()
     {
-        Assert.assertEquals(driver.findElement(By.xpath("//h1[contains(text(),'Register')]")).getText(),"Register");
+        Assert.assertEquals(driver.findElement(By.xpath("//div[contains(text(), 'Your registration completed')]")).getText(),"Your registration completed");
     }
 
     public void signup()
@@ -51,7 +51,7 @@ public class RegisteringAUser {
         driver.findElement(addDate).sendKeys("4");
         driver.findElement(addMonth).sendKeys("October");
         driver.findElement(addyear).sendKeys("1995");
-        driver.findElement(addEmail).sendKeys("Karan1166@gmil.com");
+        driver.findElement(addEmail).sendKeys("Karan1555881@gmil.com");
         driver.findElement(addCompany).sendKeys("Infostride");
         String path = System.getProperty("user.dir") + "/src/test/java/TestData/Registration.xlsx";
         FileInputStream prop1 = null;
