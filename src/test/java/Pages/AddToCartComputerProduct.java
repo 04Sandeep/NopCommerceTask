@@ -46,7 +46,7 @@ public class AddToCartComputerProduct {
     public void userLogin()
     {
         driver.findElement(clickOnLogin).click();
-        driver.findElement(enterUserEmail).sendKeys("Karan1166@gmil.com");
+        driver.findElement(enterUserEmail).sendKeys("Karan1555881@gmil.com");
         driver.findElement(enterUserPassword).sendKeys("karan00044");
         driver.findElement(ClickLoginButton).click();
     }
@@ -54,7 +54,6 @@ public class AddToCartComputerProduct {
     public void verification1() {
         Assert.assertEquals(driver.findElement(By.xpath("//h1[contains(text(),'Thank you')]")).getText(),"Thank you");
     }
-
     public void addToCart() throws IOException {
 
         driver.findElement(clickOnComputer).click();
@@ -63,9 +62,6 @@ public class AddToCartComputerProduct {
         driver.findElement(clickOnAddToCart).click();
         driver.findElement(clickOnAddCartItem).click();
         driver.findElement(clickOnShoppingCart).click();
-        driver.findElement(clickOnTerms).click();
-        driver.findElement(clickOnCheckout).click();
-        driver.findElement(clickonContinue).click();
         driver.findElement(clickOnTerms).click();
         driver.findElement(clickOnCheckout).click();
         String path = System.getProperty("user.dir") + "/src/test/java/TestData/Addtocart.xlsx";
@@ -77,16 +73,18 @@ public class AddToCartComputerProduct {
         }
         XSSFWorkbook wb = new XSSFWorkbook(prop1);
         XSSFSheet sheet = wb.getSheet("Sheet1");
-        String enterCountry= sheet.getRow(1).getCell(0).getStringCellValue();
-        String enterUserCity= sheet.getRow(1).getCell(1).getStringCellValue();
-        String enterUserAddress = sheet.getRow(1).getCell(2).getStringCellValue();
-        String enterUserPostcode= sheet.getRow(1).getCell(3).getStringCellValue();
-        String enterUserPhoneNumber= sheet.getRow(1).getCell(4).getStringCellValue();
-        driver.findElement(addCountry).sendKeys(enterCountry);
+        String enterUserCity= sheet.getRow(1).getCell(0).getStringCellValue();
+        String enterUserAddress = sheet.getRow(1).getCell(1).getStringCellValue();
+        String enterUserPostcode= sheet.getRow(1).getCell(2).getStringCellValue();
+        String enterUserPhoneNumber= sheet.getRow(1).getCell(3).getStringCellValue();
+        driver.findElement(addCountry).sendKeys("Australia");
         driver.findElement(enterCity).sendKeys(enterUserCity);
         driver.findElement(enterAddress).sendKeys(enterUserAddress);
         driver.findElement(enterPostCode).sendKeys(enterUserPostcode);
         driver.findElement(enterPhoneNumber).sendKeys(enterUserPhoneNumber);
+        driver.findElement(clickonContinue).click();
+        driver.findElement(clickOnTerms).click();
+        driver.findElement(clickOnCheckout).click();
         driver.findElement(save).click();
         driver.findElement(continueButton).click();
         driver.findElement(againContinue).click();
